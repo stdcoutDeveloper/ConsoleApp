@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)ResourceGetter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)share_proj_resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\Arithmetic.h">
+      <Filter>Header Files\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(MSBuildThisFileDirectory)ShareProj.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{e3dd01a2-f9ef-4ffb-a46c-b365c1149000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{636596a8-093d-484d-bf92-5e3be660e70e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Lib">
+      <UniqueIdentifier>{ecb3429e-8530-412f-ada3-5a160754bafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\include">
+      <UniqueIdentifier>{5185bc8d-d51f-4794-8ee9-a309cf010729}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Res\ConsoleApp.exe">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="$(MSBuildThisFileDirectory)SupportedOS.manifest">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Lib\$(Configuration)\$(Platform)\MyOwnMathLib.pdb">
+      <Filter>Resource Files\Lib</Filter>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Lib\$(Configuration)\$(Platform)\MyOwnMathLib.lib">
+      <Filter>Resource Files\Lib</Filter>
+    </None>
+  </ItemGroup>
+</Project>

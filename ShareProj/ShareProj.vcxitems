@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{53d32b91-3da3-4c4e-a346-b81b019947ed}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+      <!-- <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions> -->
+    </ClCompile>
+    <!-- declare manifest goes here! -->
+    <Manifest>
+      <AdditionalManifestFiles>%(AdditionalManifestFiles);$(MSBuildThisFileDirectory)SupportedOS.manifest;</AdditionalManifestFiles>
+    </Manifest>
+    <!-- end of declare! -->
+    <!-- add static library here!!! -->
+    <Link>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories);$(MSBuildThisFileDirectory)Lib\$(Configuration)\$(Platform)</AdditionalLibraryDirectories>
+      <!-- <AdditionalDependencies>%(AdditionalDependencies);MyOwnMathLib.lib</AdditionalDependencies> -->
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)Common.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)include\Arithmetic.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)share_proj_resource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)ResourceGetter.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(MSBuildThisFileDirectory)ShareProj.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Res\ConsoleApp.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="$(MSBuildThisFileDirectory)SupportedOS.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Lib\$(Configuration)\$(Platform)\MyOwnMathLib.pdb" />
+    <None Include="$(MSBuildThisFileDirectory)Lib\$(Configuration)\$(Platform)\MyOwnMathLib.lib" />
+  </ItemGroup>
+</Project>
