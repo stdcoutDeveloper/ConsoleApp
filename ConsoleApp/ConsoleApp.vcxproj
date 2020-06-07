@@ -24,6 +24,7 @@
   <ItemGroup>
     <ClInclude Include="Auto.h" />
     <ClInclude Include="Calculator.h" />
+    <ClInclude Include="MoveSemantics.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="TypeAliases.h" />
     <ClInclude Include="UniformInitialization.h" />
