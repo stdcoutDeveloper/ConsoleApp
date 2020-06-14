@@ -3,6 +3,8 @@
 #include "Common.h"
 #include "MoveSemantics.h"
 
+#include <MathLibrary.h>
+
 int main(int argc, const char *argv[])
 {
 	using namespace ModernCpp;
@@ -10,10 +12,22 @@ int main(int argc, const char *argv[])
 	// ModernCpp::GotchasUsingAuto::TestFoo();
 	// ModernCpp::UniformInitialization::NonStaticMemberInitialization();
 	/*Common::Calculator c;
-	std::cout << c.Add2Numbers(8, 9) << std::endl;*/
+	std::cout << c.Add2Numbers(8, 9) << std::endl;
 
 	MyStringConsumer cons("Move Semantics");
-	cons.PrintOutMyString();
+	cons.PrintOutMyString();*/
+
+	// Initialize a Fibonacci relation sequence.
+	fibonacci_init(1, 1);
+	// Write out the sequence values until overflow.
+	do {
+		std::cout << fibonacci_index() << ": "
+			<< fibonacci_current() << std::endl;
+	} while (fibonacci_next());
+	// Report count of values written before overflow.
+	std::cout << fibonacci_index() + 1 <<
+		" Fibonacci sequence values fit in an " <<
+		"unsigned 64-bit integer." << std::endl;
 
 	return EXIT_SUCCESS;
 }
