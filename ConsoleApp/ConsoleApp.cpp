@@ -2,7 +2,7 @@
 #include "UniformInitialization.h"
 #include "Common.h"
 #include "MoveSemantics.h"
-
+#include "Calculator.h"
 #include <MathLibrary.h>
 
 int main(int argc, const char *argv[])
@@ -28,6 +28,9 @@ int main(int argc, const char *argv[])
 	std::cout << fibonacci_index() + 1 <<
 		" Fibonacci sequence values fit in an " <<
 		"unsigned 64-bit integer." << std::endl;
+
+	CAL(7, 8);
+	CAL(8, 9);
 
 	return EXIT_SUCCESS;
 }
